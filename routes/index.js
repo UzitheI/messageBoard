@@ -1,26 +1,27 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router();
+
+const currentDate = new Date();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
 
 const messages=[
   {
     text:"hi there",
     user:"Armando",
-    added:new Date()
+    added:formattedDate,
   },
   {
     text:"Hello World",
     user:"Charles",
-    added:new Date()
+    added:formattedDate
   }
 ];
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title:"Message Board" });
+  res.render('index', { title:"Message Board" ,
+  messages:messages});
 });
-
-router.get('/new',(req,res)=>{
-  res.render('form',{title:"mini message board"});
-})
 
 module.exports = router;
