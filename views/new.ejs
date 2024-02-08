@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Write your <%= info%></p>
+    <form action="submit">
+        <label for="">Enter your name:</label>
+        <input type="text" name="" id="">
+        <label for="">Enter the message that you want to post:</label>
+        <% forEach(function(message){ %>
+        <input type="text">
+        <% }) %>
+    </form>
+    
+    <a href="/">Go Back to the board</a>
+  </body>
+</html>
