@@ -4,9 +4,12 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('messageboard:server');
-var http = require('http');
+// var app = require('../app');
+import app from '../app.js'
+import debug from 'debug'
+// var debug = require('debug')('messageboard:server');
+import http from 'http'
+// var http = require('http');
 
 /**
  * Get port from environment and store in Express.
