@@ -5,20 +5,26 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <ul >
+    <h1 class="head"><%= title %></h1>
+    <p class="wlc">Welcome to <%= title %></p>
+    <ul class="list" >
       <% messages.forEach(element=>{%>
-      <li>
-        <%= element.name  %>
-        <p>
+      <li class="aa">
+        <p class="name">
+          <%= element.name  %>
+
+        </p>
+        <p class="text">
 
           <%= element.text %>
         </p>
-        <%= element.added %>
+        <h3 class="date">
+
+          <%= element.added %>
+        </h3>
       </li>
       <% }); %>
     </ul>
-    <a href="/new">Add a new message</a>
+    <a href="/new" class="Add">Add a new message</a>
   </body>
 </html>
