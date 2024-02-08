@@ -8,14 +8,14 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <ul >
-      <% messages.forEach(function(message){ %>
+      <% messages.forEach(element=>{%>
       <li>
-        <%= message.name  %>
+        <%= element.name  %>
         <p>
 
-          <%= message.text %>
+          <%= element.text %>
         </p>
-        <%= message.added %>
+        <%= element.added %>
       </li>
       <% }); %>
     </ul>

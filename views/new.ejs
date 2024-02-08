@@ -7,13 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <p>Write your <%= info%></p>
-    <form action="submit">
-        <label for="">Enter your name:</label>
-        <input type="text" name="" id="">
-        <label for="">Enter the message that you want to post:</label>
-        <% forEach(function(message){ %>
-        <input type="text">
-        <% }) %>
+    <form method="POST" action="/new">
+        <label for="name">Your Name</label>
+        <input name="name" type="text" placeholder="Name" required>
+        <label for="message">Your nessage</label>
+        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        <button type="submit">Send</button>
     </form>
     
     <a href="/">Go Back to the board</a>
