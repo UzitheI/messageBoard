@@ -1,27 +1,30 @@
-const express = require('express')
-const router = express.Router();
+const express= require('express')
+var router = express.Router();
 
-const currentDate = new Date();
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-const formattedDate = currentDate.toLocaleDateString('en-US', options);
-
-
-const messages=[
-  {
-    text:"hi there",
-    user:"Armando",
-    added:formattedDate,
-  },
-  {
-    text:"Hello World",
-    user:"Charles",
-    added:formattedDate
-  }
-];
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title:"Message Board" ,
-  messages:messages});
+  res.render('index', { title: 'Message Board', messages:messages});
 });
 
-module.exports = router;
+
+// router.post ('/new',(req,res)=>{
+//   messages.push({user:req.body.userName, text:req.body.messageText, added:new Date()})
+//   res.redirect('/');
+// })
+module.exports=router;
+
+module.exports=function messg(){
+    const messages=[
+      {
+        name:'Ujjwal',
+        text:'Hey I wanted to see you',
+        added: new Date()
+      },
+      {
+        name:'Hannah',
+        text:'Yesterday i saw your cow',
+        added: new Date()
+      }
+    ]
+  }
+

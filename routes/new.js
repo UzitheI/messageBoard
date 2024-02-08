@@ -1,23 +1,16 @@
-var express = require('express');
-const { format } = require('morgan');
-var router = express.Router();
+const express = require('express')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('/form',{title:'LEAVE A MESSAGE', app:"mini message board"})
-});
+const router = express.Router()
 
-router.post('/',(req,res)=>{
-  const author= req.body.author;
-  const message =req.body.message;
-  const date= format(new Date(),'dd MMM YYYY, HH:mm');
+const messages= require('../routes/index')
 
-  message.push({
-    text:message,
-    author:author,
-    added:date,
-  });
-  res.redirect('/');
-});
+router.get('/',(req,res)=>{
+    res.render('new',{title:"Add a new message", info:"message"})
+})
 
-module.exports = router;
+router.post ('/new',(req,res)=>{
+    messages.push({user:req.body.userName, text:req.body.messageText, added:format(new Date(),'dd MMMM yyy, HH:mm')});
+    res.redirect('/');
+})
+
+module.exports=router;
