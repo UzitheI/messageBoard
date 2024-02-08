@@ -1,8 +1,51 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
+  background: rgb(0,212,255);
+background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(24,81,144,1) 63%, rgba(9,9,121,1) 75%, rgba(36,16,89,1) 84%, rgba(9,9,121,1) 95%, rgba(5,3,68,1) 100%, rgba(2,0,36,1) 100%, rgba(2,0,36,1) 108%);
 a {
   color: #00B7FF;
+}
+}
+
+.head{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  border: 2px solid green;
+
+}
+.wlc{
+  font-size: 30px;
+  font-style: italic;
+}
+
+.Add{
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  padding: 4px;
+}
+
+.list{
+  padding: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.name{
+  font-size: 30px;
+  text-decoration: underline;
+
+}
+.text{
+  font-size: medium;
 }
